@@ -1,0 +1,35 @@
+@import 'variables';
+
+#footer {
+  position: relative;
+  margin-top: 150px;
+  color: black;
+  text-align: center;
+  padding: 1px 0;
+  background: white;
+  .ce_text {
+    margin-top: 50px;
+  }
+  a {
+    color: black;
+  }
+  .inside > .ce_text > p:nth-child(4) {
+    display: flex;
+    justify-content: space-between;
+    width: 440px;
+    margin: 0 auto;
+    align-items: center;
+    a {
+      display: flex;
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  #footer {
+    background-size: cover;
+  }
+}
