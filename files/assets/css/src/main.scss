@@ -1,5 +1,9 @@
 @import 'variables';
 
+#container {
+  padding-top: 150px;
+}
+
 #main {
   min-height: 30vh;
 }
@@ -53,12 +57,12 @@
 }
 
 .rechts {
-  overflow: visible;
+  height: 70vh;
   .ce_text:first-child {
     width: 50%;
     float: right;
     position: relative;
-    transform: translateY(-350px);
+    transform: translateY(850px);
     h2 {
       font-size: 9vw;
       transform: translateX(0);
@@ -66,6 +70,7 @@
     }
     figure {
       position: absolute;
+      transform: translateX(-30vw);
     }
   }
   .ce_text:last-child {
@@ -118,7 +123,6 @@ video {
     font-family: 'Lemon', sans-serif;
     font-size: 16vw;
     line-height: 0.9em;
-    transform: translateY(-650px);
   }
   video {
     width: 100%;

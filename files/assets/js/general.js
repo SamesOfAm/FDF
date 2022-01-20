@@ -20,6 +20,12 @@ function parallaxXLeft(scrollingOffsets) {
     }
 }
 
+function parallaxXRight(scrollingOffsets) {
+    for(let i = 0; i < allSphereObjectsLeft.length; i++) {
+        allSphereObjectsRight[i].querySelector('figure').style.right = (((scrollingOffsets[i] + allSphereObjectsLeft[i].offsetHeight/2) - (window.pageYOffset + window.innerHeight/2).toString())/2) + "px";
+    }
+}
+
 let allScrollingOffsets = [];
 let allSphereOffsetsLeft = [];
 let allSphereOffsetsRight = [];
@@ -42,7 +48,24 @@ allSphereObjectsRight.forEach(object => {
     allSphereOffsetsRight.push(originalYOffset);
 })
 
+const footerEffect = () => {
+    const calc = (((getPosition(document.getElementById('footer')).offsetTop- (window.pageYOffset + window.innerHeight))/document.getElementById('footer').offsetHeight)+1)*100;
+    document.getElementById('footer').style.borderTopRightRadius = calc + "%";
+    document.getElementById('footer').style.borderTopLeftRadius = calc + "%";
+}
+
+const fixHeader = () => {
+    if(window.pageYOffset > 20) {
+        document.getElementById('header').classList.add('fixed');
+    } else if(window.pageYOffset === 0) {
+        document.getElementById('header').classList.remove('fixed');
+    }
+}
+
 window.addEventListener("scroll", function(){
     parallaxY(allScrollingOffsets);
     parallaxXLeft(allSphereOffsetsLeft);
+    parallaxXRight(allSphereOffsetsRight);
+    footerEffect();
+    fixHeader();
 });

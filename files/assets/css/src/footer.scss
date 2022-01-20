@@ -13,16 +13,23 @@
   a {
     color: black;
   }
-  .inside > .ce_text > p:nth-child(4) {
-    display: flex;
-    justify-content: space-between;
-    width: 440px;
-    margin: 0 auto;
-    align-items: center;
-    a {
-      display: flex;
+  .inside > .ce_text > p {
+    &:nth-child(2) {
       img {
-        margin-right: 10px;
+        height: 35px;
+      }
+    }
+    &:nth-child(4) {
+      display: flex;
+      justify-content: space-between;
+      width: 440px;
+      margin: 0 auto;
+      align-items: center;
+      a {
+        display: flex;
+        img {
+          margin-right: 10px;
+        }
       }
     }
   }
