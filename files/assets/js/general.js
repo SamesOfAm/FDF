@@ -10,6 +10,14 @@ function getPosition(elem){
 
 function parallaxY(scrollingOffsets) {
     for(let i = 0; i < allScrollingObjects.length; i++) {
+        /* allScrollingObjects[i].animate({
+            top: (scrollingOffsets[i] + allScrollingObjects[i].offsetHeight/2) - (window.pageYOffset + window.innerHeight/2).toString() + "px"
+        },
+            1000,
+            'swing',
+            function() {
+                console.log('Finished');
+            }); */
         allScrollingObjects[i].style.top = (scrollingOffsets[i] + allScrollingObjects[i].offsetHeight/2) - (window.pageYOffset + window.innerHeight/2).toString() + "px";
     }
 }
