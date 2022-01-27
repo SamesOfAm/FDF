@@ -11,6 +11,8 @@
 .mod_article {
   position: relative;
   margin: 120px auto;
+  overflow: visible;
+  clear: both;
 }
 
 .ce_text {
@@ -19,7 +21,61 @@
   margin: 0 auto;
   overflow: visible;
   position: relative;
+  p {
+    line-height: 1.6em;
+  }
+  &.rechts {
+    height: auto;
+  }
 }
+
+.ce_text {
+  width: 50%;
+  box-sizing: border-box;
+  &.rechts {
+    float: right;
+    padding-right: 5vw;
+  }
+  &.links {
+    float: left;
+    padding-left: 5vw;
+  }
+}
+
+.ce_image {
+  &.links {
+    width: 45%;
+    height: 50vh;
+  }
+  &.kreis {
+    border-radius: 50%;
+    width: 50vh;
+    transform: translateX(100%);
+  }
+  &.rechts.scrolling {
+    width: 45%;
+    right: 0;
+  }
+}
+
+.ce_text.janus {
+  line-height: 1.7em;
+  p {
+    &:first-of-type {
+      border-top: 1px solid;
+      padding-top: 45px;
+    }
+  }
+  figure {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 40px;
+    background: $background;
+    transform: translateX(-100%);
+  }
+}
+
 
 .links {
   .ce_text:first-child {
@@ -58,11 +114,12 @@
 
 .rechts {
   height: 70vh;
+  overflow: hidden;
   .ce_text:first-child {
     width: 50%;
     float: right;
     position: relative;
-    transform: translateY(850px);
+    transform: translateY(50vw);
     h2 {
       font-size: 9vw;
       transform: translateX(0);
@@ -102,11 +159,20 @@
 
 .blau h2 {
   color: $blue;
+  text-shadow: 0 0 40px white;
 }
 
 .scrolling {
+  position: absolute;
   figure {
     position: absolute;
+  }
+}
+
+.scrolling-sphere-left,.scrolling-sphere-right {
+  figure img {
+    border-radius: 50%;
+    width: 30vw;
   }
 }
 
@@ -126,5 +192,57 @@ video {
   }
   video {
     width: 100%;
+  }
+}
+
+.links.pink h2 {
+  mix-blend-mode: difference;
+}
+
+.to-top-button {
+  position: fixed;
+  width: 80px;
+  bottom: 100px;
+  right: 150px;
+  z-index: 300;
+  img {
+    filter: grayscale(1);
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .mod_article {
+    margin: 40px auto;
+  }
+
+  #main .inside .mod_article .ce_text:first-child, #main .inside .mod_article .ce_text:last-child {
+    width: 90%;
+    float: none;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0 auto;
+    transform: none;
+    overflow: hidden;
+    figure {
+      transform: translateX(-50%);
+    }
+    h2 {
+      text-align: center;
+      transform: none;
+    }
+  }
+
+  .scrolling figure {
+    display: none;
+  }
+
+  .to-top-button {
+    width: 55px;
+    bottom: 25px;
+    right: 25px;
+  }
+
+  .blau h2 {
+    text-shadow: 0 0 10px white;
   }
 }

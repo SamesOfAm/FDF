@@ -1,7 +1,6 @@
 {
   "name": "fdf",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +10,15 @@
   "dependencies": {
     "grunt": "^1.4.1",
     "grunt-contrib-sass": "^2.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamesOfAm/FDF.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/SamesOfAm/FDF/issues"
+  },
+  "homepage": "https://github.com/SamesOfAm/FDF#readme",
+  "description": ""
 }

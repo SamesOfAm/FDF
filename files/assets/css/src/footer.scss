@@ -16,7 +16,7 @@
   .inside > .ce_text > p {
     &:nth-child(2) {
       img {
-        height: 35px;
+        height: 20px;
       }
     }
     &:nth-child(4) {
@@ -38,5 +38,15 @@
 @media screen and (min-width: 1920px) {
   #footer {
     background-size: cover;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  #footer .inside > .ce_text > p:nth-child(4) {
+    width: 100%;
+    flex-wrap: wrap;
+    a {
+      width: 100%;
+    }
   }
 }

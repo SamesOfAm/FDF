@@ -1,0 +1,48 @@
+@import 'variables';
+
+.mobile_menu_trigger {
+  width: 36px;
+  cursor: pointer;
+  z-index: 400;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  background: #151515;
+  right: 32px;
+  padding: 21px;
+  border-radius: 50%;
+}
+
+.mobile_menu {
+  z-index: 1000;
+  .inner nav {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    ul {
+      height: 95vh;
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%;
+      margin: 0 auto;
+      li {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+        &:not(:last-child) {
+          border-bottom: 1px solid $pink;
+        }
+        a, strong {
+          color: $pink;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 40px;
+        }
+        strong {
+          color: white;
+        }
+      }
+    }
+  }
+}

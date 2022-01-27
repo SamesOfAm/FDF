@@ -29,6 +29,24 @@ ul {
   list-style: none;
 }
 
+.mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: $tablet) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: initial;
+  }
+}
+
 @import 'header';
 @import 'main';
 @import 'footer';
+@import 'video';
+@import 'effects';
+@import 'pdf';
+@import 'menu';
