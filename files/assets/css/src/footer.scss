@@ -42,11 +42,24 @@
 }
 
 @media screen and (max-width: $tablet) {
+  #footer .inside > .ce_text > p:nth-child(2) {
+    display: flex;
+  }
+
+  #footer .inside > .ce_text > p:nth-child(3) a {
+    display: block;
+  }
+
   #footer .inside > .ce_text > p:nth-child(4) {
     width: 100%;
     flex-wrap: wrap;
     a {
       width: 100%;
+      display: block;
     }
+  }
+
+  #footer .inside > .ce_text > p:last-child {
+    font-size: 11px;
   }
 }

@@ -59,6 +59,7 @@
 }
 
 .ce_text.janus {
+  padding-top: .1px;
   line-height: 1.7em;
   p {
     &:first-of-type {
@@ -114,20 +115,20 @@
 
 .rechts {
   height: 70vh;
-  overflow: hidden;
+  overflow-y: visible;
   .ce_text:first-child {
     width: 50%;
     float: right;
     position: relative;
-    transform: translateY(50vw);
+    overflow-x: hidden;
+    height: 31vw;
     h2 {
       font-size: 9vw;
-      transform: translateX(0);
+      transform: translateX(1vw);
       line-height: .9em;
     }
     figure {
       position: absolute;
-      transform: translateX(-30vw);
     }
   }
   .ce_text:last-child {
@@ -244,5 +245,11 @@ video {
 
   .blau h2 {
     text-shadow: 0 0 10px white;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .mod_article.links.pink {
+    min-height: 70vh;
   }
 }

@@ -10,3 +10,10 @@
     height: 1040px;
   }
 }
+
+@media screen and (max-width: $tablet) {
+  .pdf-wrapper .pdf-viewer {
+    width: 350px;
+    height: 492px;
+  }
+}

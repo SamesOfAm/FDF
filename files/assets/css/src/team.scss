@@ -1,0 +1,39 @@
+@import 'variables';
+
+#team-members {
+  width: 90%;
+  max-width: 1000px;
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  h1 {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .team {
+    width: 23%;
+    text-align: center;
+    margin: 15px auto;
+    img {
+      width: 85%;
+      max-width: 324px;
+      border-radius: 50%;
+      border: 5px solid white;
+    }
+    p {
+      text-transform: uppercase;
+      font-size: 22px;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  #main .mod_article#team-members .ce_text.team {
+    width: 100%;
+    figure {
+      transform: none;
+    }
+  }
+}

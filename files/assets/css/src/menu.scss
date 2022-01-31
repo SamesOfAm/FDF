@@ -15,32 +15,43 @@
 
 .mobile_menu {
   z-index: 1000;
-  .inner nav {
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    ul {
-      height: 95vh;
+  .inner {
+    .menu-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: $pink;
+      font-size: 72px;
+      line-height: 0.5em;
+      cursor: pointer;
+    }
+    nav {
       display: flex;
-      flex-wrap: wrap;
-      width: 90%;
-      margin: 0 auto;
-      li {
+      height: 100vh;
+      align-items: center;
+      ul {
+        height: 95vh;
         display: flex;
-        align-items: center;
-        width: 100%;
-        padding: 10px 0;
-        &:not(:last-child) {
-          border-bottom: 1px solid $pink;
-        }
-        a, strong {
-          color: $pink;
-          text-transform: uppercase;
-          font-weight: bold;
-          font-size: 40px;
-        }
-        strong {
-          color: white;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 0 auto;
+        li {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          padding: 10px 0;
+          &:not(:last-child) {
+            border-bottom: 1px solid $pink;
+          }
+          a, strong {
+            color: $pink;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 40px;
+          }
+          strong {
+            color: white;
+          }
         }
       }
     }
