@@ -3,7 +3,7 @@
 .award-headline {
   margin-bottom: 0;
   background: rgba(20,20,20,.7);
-  padding-top: 50px;
+  padding-top: 12px;
   .ce_text {
     width: 100%;
     text-align: center;
@@ -83,15 +83,29 @@
   }
 }
 
-@media screen and (max-width: $tablet) {
+
+@media screen and (max-width: 1300px) {
+  #awardees,#nominees {
+    width: 90%;
+    margin: 0 auto;
+    .ce_text {
+      height: 250px;
+    }
+  }
+
+  #main .inside .mod_article#awardees .ce_text, #main .inside .mod_article#nominees .ce_text {
+    width: 45%;
+    margin: 20px auto;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+}
+
+@media screen and (max-width: $smartphone) {
   #main .inside .mod_article#awardees .ce_text, #main .inside .mod_article#nominees .ce_text {
     width: 90%;
     height: 275px;
-    margin: 20px auto;
     padding: 35px;
-    &:first-child {
-      width: 90%;
-    }
     &:before {
       width: 60vw;
       height: 60vw;

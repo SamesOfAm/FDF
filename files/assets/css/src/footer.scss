@@ -44,6 +44,9 @@
 @media screen and (max-width: $tablet) {
   #footer .inside > .ce_text > p:nth-child(2) {
     display: flex;
+    width: 250px;
+    margin: 0 auto;
+    justify-content: space-around;
   }
 
   #footer .inside > .ce_text > p:nth-child(3) a {
@@ -61,5 +64,12 @@
 
   #footer .inside > .ce_text > p:last-child {
     font-size: 11px;
+  }
+}
+
+@media screen and (max-width: $smartphone) {
+  #footer .inside > .ce_text > p:nth-child(2) {
+    width: auto;
+    justify-content: space-between;
   }
 }

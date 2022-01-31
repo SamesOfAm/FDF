@@ -13,6 +13,12 @@ body {
   color: white;
 }
 
+h1 {
+  font-size: 45px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 h2 {
   text-transform: uppercase;
   font-weight: 900;
@@ -23,7 +29,7 @@ a {
   text-decoration: none;
 }
 
-.ce_text > p > a {
+#main .ce_text > p > a {
   color: $pink;
   position: relative;
   &:after {
@@ -70,3 +76,4 @@ ul {
 @import 'menu';
 @import 'team';
 @import 'awards';
+@import 'media';

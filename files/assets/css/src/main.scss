@@ -77,6 +77,11 @@
   }
 }
 
+.links,.rechts {
+  h3 {
+    text-transform: uppercase;
+  }
+}
 
 .links {
   .ce_text:first-child {
@@ -85,7 +90,7 @@
     position: relative;
     transform: translateY(150px);
     h2 {
-      font-size: 9vw;
+      font-size: 8vw;
       transform: translateX(4vw);
       line-height: .9em;
     }
@@ -96,12 +101,6 @@
     padding-right: 5vw;
     box-sizing: border-box;
     line-height: 1.7em;
-    p {
-      &:first-of-type {
-        border-top: 1px solid;
-        padding-top: 45px;
-      }
-    }
     figure {
       position: absolute;
       top: 0;
@@ -121,7 +120,7 @@
     float: right;
     position: relative;
     overflow-x: hidden;
-    height: 31vw;
+    height: 32vw;
     h2 {
       font-size: 9vw;
       transform: translateX(1vw);
@@ -137,11 +136,8 @@
     padding-left: 5vw;
     box-sizing: border-box;
     line-height: 1.7em;
-    p {
-      &:first-of-type {
-        border-top: 1px solid;
-        padding-top: 45px;
-      }
+    h3 {
+      text-transform: uppercase;
     }
     figure {
       position: absolute;
@@ -211,6 +207,18 @@ video {
   }
 }
 
+.small-headline.ce_text:first-child h2 {
+  font-size: 6vw;
+}
+
+#hall-of-fame {
+  text-align: center;
+  iframe {
+    max-width: 100%;
+    border: none;
+  }
+}
+
 @media screen and (max-width: $tablet) {
   .mod_article {
     margin: 40px auto;
@@ -245,6 +253,10 @@ video {
 
   .blau h2 {
     text-shadow: 0 0 10px white;
+  }
+
+  .rechts {
+    height: auto;
   }
 }
 
