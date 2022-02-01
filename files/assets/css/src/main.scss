@@ -199,12 +199,9 @@ video {
 .to-top-button {
   position: fixed;
   width: 80px;
-  bottom: 100px;
-  right: 150px;
+  bottom: 70px;
+  right: 100px;
   z-index: 300;
-  img {
-    filter: grayscale(1);
-  }
 }
 
 .small-headline.ce_text:first-child h2 {
