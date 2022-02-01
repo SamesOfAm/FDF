@@ -2,7 +2,6 @@
 
 .award-headline {
   margin-bottom: 0;
-  background: rgba(20,20,20,.7);
   padding-top: 12px;
   .ce_text {
     width: 100%;
@@ -28,20 +27,23 @@
     height: 20vw;
     margin: 0;
     padding: 3vw;
-    background: rgba(20,20,20,.7);
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    text-align: center;
     box-sizing: border-box;
     transition: background-color 750ms;
     &:hover {
       background-color: rgba(30,30,30,.8);
     }
     h4 {
+      width: 100%;
+      position: relative;
       text-transform: uppercase;
       text-align: center;
     }
     p {
+      width: 100%;
       strong {
         color: $bright-blue;
       }
@@ -49,15 +51,14 @@
   }
 }
 
-#awardees .ce_text:before {
+#awardees .ce_text h4:before {
   position: absolute;
   content: '';
   left: 50%;
-  top: 50%;
-  width: 11vw;
-  height: 11vw;
-  transform: translateY(-50%) translateX(-50%);
-  opacity: 0.15;
+  top: -45px;
+  width: 40px;
+  height: 40px;
+  transform: translateX(-50%);
   background: url('../layout/janus.svg') no-repeat 0/cover;
 }
 

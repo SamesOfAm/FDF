@@ -5,7 +5,7 @@
     display: flex;
     flex-wrap: wrap;
     li {
-      width: 20vw;
+      width: 20%;
       height: 20vw;
       figure {
         width: 100%;
@@ -27,7 +27,7 @@
 
 @media screen and (max-width: $smartphone) {
   #media ul li {
-    width: 50vw;
+    width: 50%;
     height: 50vw;
   }
 }
