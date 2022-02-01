@@ -1,6 +1,14 @@
 @import 'variables';
 
-#media {
+.media-page {
+  h2.ce_headline {
+    width: 50%;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+}
+
+#media-photo-gallery {
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -20,6 +28,37 @@
             transform: scale(1.1);
           }
         }
+      }
+    }
+  }
+}
+
+#media-films {
+  display: flex;
+  flex-wrap: wrap;
+  .ce_youtube {
+    position: relative;
+    width: 20%;
+    height: 20vw;
+    box-sizing: border-box;
+    h2 {
+      /* position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 15px;
+      font-weight: normal;
+      background: rgba(0,0,0,.7);
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      padding: 8px 20px;
+      box-sizing: border-box; */
+      display: none;
+    }
+    figure {
+      iframe {
+        width: 100%;
+        border: none;
       }
     }
   }
