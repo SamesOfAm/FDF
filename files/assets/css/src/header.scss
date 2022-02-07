@@ -33,7 +33,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  width: 70%;
+  width: 85%;
   margin: 0 auto;
   .mod_customnav {
     height: 150px;
@@ -57,6 +57,7 @@
           color: $pink;
           text-transform: uppercase;
           font-weight: normal;
+          align-self: flex-end;
         }
         a {
           &:before {
