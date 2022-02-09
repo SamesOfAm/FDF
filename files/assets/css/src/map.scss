@@ -14,3 +14,16 @@
     }
   }
 }
+
+@media screen and (max-width: $tablet) {
+  #main .inside .mod_article .ce_text:first-child.community-map {
+    width: 100%;
+    p {
+      font-size: 16px;
+      padding: 55px 15px;
+    }
+    figure {
+      transform: none;
+    }
+  }
+}
