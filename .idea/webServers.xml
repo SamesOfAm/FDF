@@ -2,10 +2,10 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="68f1c302-af04-4d61-b4b0-d2d6684e75f8" name="Server">
-        <fileTransfer rootFolder="/floriantepelmann/contao" accessType="SFTP" host="home587672564.1and1-data.host" port="22" sshConfigId="05d787d1-a51d-4288-abd5-3db335b464e0" sshConfig="u81877111@home587672564.1and1-data.host:22 password">
+      <webServer id="15677d27-380b-449e-b42e-6a5aeb1eb6d0" name="Andre" url="http://ftp.fulldome-festival.de">
+        <fileTransfer host="ftp.fulldome-festival.de" port="21">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>

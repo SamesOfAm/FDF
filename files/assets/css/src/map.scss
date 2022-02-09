@@ -1,0 +1,16 @@
+@import 'variables';
+
+.community-map {
+  width: 100%;
+  p {
+    padding: 55px 0;
+    text-align: center;
+    font-size: 23px;
+    color: $pink;
+    background-color: $blue;
+    .community-map-hl {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}
