@@ -4,7 +4,7 @@
   width: 100%;
   max-width: initial;
   p {
-    padding: 55px 0;
+    padding: 55px 15px;
     text-align: center;
     font-size: 23px;
     color: $pink;
@@ -12,6 +12,18 @@
     .community-map-hl {
       font-weight: bold;
       text-transform: uppercase;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  #main .inside .mod_article .ce_text:first-child.community-map {
+    width: 100%;
+    p {
+      font-size: 16px;
+    }
+    figure {
+      transform: none;
     }
   }
 }
