@@ -57,6 +57,12 @@ ul {
   display: none;
 }
 
+.full-width {
+  img {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: $tablet) {
   .desktop-only {
     display: none;
