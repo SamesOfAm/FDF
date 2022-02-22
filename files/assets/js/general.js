@@ -1,3 +1,20 @@
+let audioMuted = true;
+
+const toggleAudioIcon = (e) => {
+    if(audioMuted) {
+        e.target.src = "files/assets/layout/audio-off-white.png";
+        audioMuted = false;
+    } else {
+        e.target.src = "files/assets/layout/audio-white.png";
+        audioMuted = true;
+    }
+}
+
+if(document.querySelector('.icon-audio')) {
+    document.querySelector('.icon-audio').addEventListener('click', toggleAudioIcon);
+}
+
+
 function getPosition(elem){
     let dims = {offsetLeft:0, offsetTop:0};
     do {
