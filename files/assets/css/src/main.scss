@@ -16,7 +16,7 @@
 }
 
 .ce_text {
-  width: 90%;
+  width: 50%;
   max-width: 1500px;
   margin: 0 auto;
   overflow: visible;
@@ -29,17 +29,8 @@
   }
 }
 
-.ce_text {
-  width: 50%;
-  box-sizing: border-box;
-  &.rechts {
-    float: right;
-    padding-right: 5vw;
-  }
-  &.links {
-    float: left;
-    padding-left: 5vw;
-  }
+#main .ce_text p {
+  font-size: 21px;
 }
 
 .ce_image {
@@ -219,6 +210,40 @@ video {
   }
 }
 
+.teaser-with-headline {
+  img {
+    width: 100%;
+  }
+  .ce_text {
+    position: absolute;
+    bottom: 0;
+    right: 10vw;
+    width: auto;
+    h1 {
+      font-size: 120px;
+      line-height: 0.4em;
+      text-align: right;
+      .hl-line-two {
+        text-transform: none;
+        font-weight: normal;
+        font-style: italic;
+        font-size: 50px;
+        line-height: 0.6em;
+      }
+    }
+  }
+}
+
+.fake3d {
+  height: 28vw;
+  .frame {
+    height: 100%;
+    > div {
+      height: 100%;
+    }
+  }
+}
+
 @media screen and (max-width: $tablet) {
   .mod_article {
     margin: 40px auto;
@@ -257,6 +282,19 @@ video {
 
   .rechts {
     height: auto;
+  }
+}
+
+@media screen and (max-width: $smartphone) {
+  .teaser-with-headline .ce_text h1 {
+    font-size:50px;
+    .hl-line-two {
+      text-transform:none;
+      font-weight:normal;
+      font-style:italic;
+      font-size:23px;
+      line-height:.6em
+    }
   }
 }
 
