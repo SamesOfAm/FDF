@@ -1,0 +1,8 @@
+<!-- rsce_my_element.html5 -->
+<div class="sponsor-gallery">
+    <div class="sponsor-gallery-frame">
+        <pre>
+            <?= var_dump($this->images) ?>
+        </pre>
+    </div>
+</div>

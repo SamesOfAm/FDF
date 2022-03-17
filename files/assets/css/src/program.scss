@@ -1,0 +1,21 @@
+@import 'variables';
+
+.program-tables {
+  a {
+    color: $pink;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: $pink;
+      transition: height 250ms;
+    }
+    &:hover:after {
+      height: 6px;
+    }
+  }
+}
