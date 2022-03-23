@@ -1,7 +1,9 @@
 @import "variables";
 
 .pdf-wrapper {
-  width: 100%;
+  width: 800px;
+  height: 1180px;
+  margin: 0 auto;
   clear: both;
   padding: 80px 0;
   text-align: center;
@@ -12,8 +14,12 @@
 }
 
 @media screen and (max-width: $tablet) {
-  .pdf-wrapper .pdf-viewer {
-    width: 350px;
-    height: 492px;
+  .pdf-wrapper {
+    width: 335px;
+    height: 520px;
+    .pdf-viewer {
+      width: 350px;
+      height: 492px;
+    }
   }
 }
