@@ -38,6 +38,34 @@
   }
 }
 
+#footer .mod_changelanguage {
+  position: absolute;
+  top: -140px;
+  right: 25vw;
+  z-index: 100;
+  ul li a {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50%;
+    padding: 20px;
+    background: #0059ad;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    border: 15px solid black;
+    transition: color 250ms;
+    &:hover {
+      color: $pink;
+    }
+  }
+}
+
 @media screen and (min-width: 1920px) {
   #footer {
     background-size: cover;
@@ -67,6 +95,17 @@
 
   #footer .inside > .ce_text > p:last-child {
     font-size: 11px;
+  }
+
+  #footer .mod_changelanguage {
+    top: 120px;
+    right: 5vw;
+    ul li a {
+      font-size: 20px;
+      width: 75px;
+      height: 75px;
+      border-width: 10px;
+    }
   }
 }
 
