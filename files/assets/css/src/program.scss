@@ -19,3 +19,17 @@
     }
   }
 }
+
+.guideline-downloads.program-downloads {
+  a {
+    width: 49%;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .guideline-downloads.program-downloads {
+    a {
+      width: 100%;
+    }
+  }
+}
