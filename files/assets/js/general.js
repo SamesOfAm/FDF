@@ -100,11 +100,35 @@ const footerEffect = () => {
     document.getElementById('footer').style.borderTopLeftRadius = calc + "%";
 }
 
+const languageSwitcher = document.querySelector('.language nav ul li a span');
+
+const shrinkLanguageSwitcher = () => {
+    if(document.documentElement.lang === "en") {
+        languageSwitcher.innerHTML = "DE";
+    } else {
+        languageSwitcher.innerHTML = "EN";
+    }
+}
+
+const expandLanguageSwitcher = () => {
+    if(document.documentElement.lang === "en") {
+        languageSwitcher.innerHTML = "Deutsch";
+    } else {
+        languageSwitcher.innerHTML = "English";
+    }
+}
+
 const fixHeader = () => {
     if(window.pageYOffset > 20) {
         document.getElementById('header').classList.add('fixed');
+        if(document.querySelector('.language nav ul li a span')) {
+            shrinkLanguageSwitcher();
+        }
     } else if(window.pageYOffset === 0) {
         document.getElementById('header').classList.remove('fixed');
+        if(document.querySelector('.language nav ul li a span')) {
+            expandLanguageSwitcher();
+        }
     }
 }
 
@@ -112,6 +136,7 @@ console.log(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.te
 
 if( window.innerWidth >= 1025 ) {
     document.addEventListener("DOMContentLoaded", function (event) {
+        const yLocation = window.pageYOffset;
         window.addEventListener("scroll", function () {
             parallaxY(allScrollingOffsets);
             parallaxYSlow(allSlowScrollingOffsets);
@@ -120,8 +145,8 @@ if( window.innerWidth >= 1025 ) {
             footerEffect();
             fixHeader();
         });
-        window.scrollTo(0, 1);
-        window.scrollTo(0, 0);
+        window.scrollTo(0, yLocation+1);
+        window.scrollTo(0, yLocation);
     });
 }
 
