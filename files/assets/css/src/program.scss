@@ -26,6 +26,18 @@
   }
 }
 
+.ce_accordion .toggler {
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 250ms;
+  &:hover {
+    color: $pink;
+  }
+}
+
 @media screen and (max-width: $tablet) {
   .guideline-downloads.program-downloads {
     a {

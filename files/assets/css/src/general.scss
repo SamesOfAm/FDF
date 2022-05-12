@@ -29,7 +29,7 @@ a {
   text-decoration: none;
 }
 
-#main .ce_text > p > a, #main .mod_article .ce_text a {
+#main .ce_text > p > a, #main .mod_article:not(#submissions-banner) .ce_text a {
   color: $pink;
   position: relative;
   &:after {
