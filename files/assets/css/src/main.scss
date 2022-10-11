@@ -16,7 +16,7 @@
 }
 
 #sponsor-banner {
-  background: rgb(0, 89, 173);
+  background: $bright-blue;
   margin: -120px 0 0;
   padding: 50px 0;
   .ce_text:first-child {
@@ -208,6 +208,10 @@
     border-radius: 50%;
     width: 30vw;
   }
+}
+
+#whatsnew figure img {
+  filter: hue-rotate(170deg) invert(1);
 }
 
 .welcome {
