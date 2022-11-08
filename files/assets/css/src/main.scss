@@ -261,6 +261,16 @@ video {
   }
 }
 
+.video_container video {
+  max-width: initial;
+  width: 100%;
+  object-fit: cover;
+}
+
+body.home .video_container video {
+  max-height: 50vh;
+}
+
 .links.pink h2 {
   mix-blend-mode: difference;
 }

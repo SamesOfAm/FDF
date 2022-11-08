@@ -37,7 +37,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  .ce_youtube {
+  .ce_youtube,.ce_image {
     position: relative;
     width: 45%;
     height: 20vw;
@@ -142,7 +142,7 @@
     width: 90%;
   }
 
-  #media-films .ce_youtube {
+  #media-films .ce_youtube,#media-films .ce_image {
     width: 90%;
     height: 180px;
   }

@@ -7,6 +7,34 @@
   src: url("../fonts/lemon.woff");
 }
 
+@font-face {
+  font-family: 'Raleway';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Raleway-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-weight: normal;
+  font-style: italic;
+  src: url("../fonts/Raleway-Italic.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/Raleway-Bold.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-weight: bold;
+  font-style: italic;
+  src: url("../fonts/Raleway-BoldItalic.ttf") format('truetype');
+}
+
 body {
   background-color: $background;
   font-family: 'Raleway', sans-serif;

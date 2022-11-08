@@ -1,7 +1,7 @@
 @import 'variables';
 
 .award-headline {
-  margin-bottom: 0;
+  margin: 0;
   padding-top: 12px;
   .ce_text {
     width: 100%;
@@ -17,10 +17,10 @@
 }
 
 
-#awardees,#nominees {
+.awardees,.nominees {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 0;
+  margin: 0;
   .ce_text {
     position: relative;
     width: 20%;
@@ -41,8 +41,11 @@
       position: relative;
       text-transform: uppercase;
       text-align: center;
+      margin-bottom: 13px;
     }
     p {
+      margin-top: 0;
+      line-height: 1.15em;
       font-size: 15px;
       width: 100%;
       strong {
@@ -52,15 +55,18 @@
   }
 }
 
-#awardees .ce_text h4:before {
-  position: absolute;
-  content: '';
-  left: 50%;
-  top: -45px;
-  width: 60px;
-  height: 40px;
-  transform: translateX(-50%);
-  background: url('../layout/janus-lorbeer.png') no-repeat 0/cover;
+.awardees .ce_text h4 {
+  margin-top: 65px;
+  &:before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: -45px;
+    width: 60px;
+    height: 40px;
+    transform: translateX(-50%);
+    background: url('../layout/janus-lorbeer.png') no-repeat 0/cover;
+  }
 }
 
 .prizes {
@@ -87,7 +93,7 @@
 
 
 @media screen and (max-width: 1300px) {
-  #awardees,#nominees {
+  .awardees,.nominees {
     width: 90%;
     margin: 0 auto;
     .ce_text {
@@ -95,7 +101,7 @@
     }
   }
 
-  #main .inside .mod_article#awardees .ce_text, #main .inside .mod_article#nominees .ce_text {
+  #main .inside .mod_article.awardees .ce_text, #main .inside .mod_article.nominees .ce_text {
     width: 45%;
     margin: 20px auto;
     padding-left: 3vw;
@@ -104,7 +110,7 @@
 }
 
 @media screen and (max-width: $smartphone) {
-  #main .inside .mod_article#awardees .ce_text, #main .inside .mod_article#nominees .ce_text {
+  #main .inside .mod_article.awardees .ce_text, #main .inside .mod_article.nominees .ce_text {
     width: 90%;
     height: 275px;
     padding: 35px;

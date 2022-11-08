@@ -65,6 +65,7 @@
 
 #submissions-banner {
   background: $pink;
+  margin-top: 0;
   .ce_text {
     text-align: center;
     box-sizing: border-box;
@@ -79,9 +80,10 @@
       }
     }
     p {
-      font-size:25px;
-      margin-top: 5px;
+      font-size: 25px;
+      margin-top: 15px;
       margin-bottom: 40px;
+      line-height: 0.8em;
       a {
         color: $blue;
       }
@@ -93,5 +95,16 @@
   .guideline-downloads a {
     width: 100%;
     font-size: 6vw;
+  }
+
+  #submissions-banner .ce_text {
+    h3 {
+      font-size: 20px;
+      margin-top: 50px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1em;
+    }
   }
 }
