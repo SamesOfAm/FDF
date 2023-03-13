@@ -20,12 +20,6 @@
   }
 }
 
-.guideline-downloads.program-downloads {
-  a {
-    width: 49%;
-  }
-}
-
 .ce_accordion .toggler {
   text-align: center;
   font-size: 35px;
@@ -41,7 +35,9 @@
 @media screen and (max-width: $tablet) {
   .guideline-downloads.program-downloads {
     a {
-      width: 100%;
+      width: 42vw;
+      height: 42vw;
+      font-size: 4vw;
     }
   }
 }

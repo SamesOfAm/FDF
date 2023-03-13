@@ -31,7 +31,7 @@
   .sponsor-logos {
     display: flex;
     flex-wrap: wrap;
-    flex-flow: wrap-reverse;
+    flex-flow: wrap;
     justify-content: space-around;
     .ce_image {
       width: 17%;
@@ -392,6 +392,8 @@ body.home .video_container video {
   #sponsor-banner {
     margin: -40px 0 0;
     .sponsor-logos .ce_image {
+      display: flex;
+      align-items: center;
       width: 45%;
       margin: 0;
       a {
