@@ -32,6 +32,71 @@
   }
 }
 
+.program-overlay {
+  opacity: 0;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,.7);
+  z-index: 9999;
+  transition: opacity 1000ms;
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.program-overlay-content {
+  position: absolute;
+  opacity: 0;
+  width: 60%;
+  height: 80%;
+  top: 40%;
+  left: 50%;
+  padding: 50px 80px;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  background: black;
+  transition: top 500ms, opacity 500ms;
+  overflow-y: scroll;
+  &.active {
+    opacity: 1;
+    top: 50%;
+  }
+  .ce_text {
+    width: 100%;
+    a {
+      color: $pink;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: $pink;
+        transition: height 250ms;
+      }
+      &:hover:after {
+        height: 3px;
+      }
+    }
+  }
+}
+
+.program-overlay-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 80px;
+  line-height: 0em;
+  cursor: pointer;
+}
+
 @media screen and (max-width: $tablet) {
   .guideline-downloads.program-downloads {
     a {
