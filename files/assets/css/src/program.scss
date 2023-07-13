@@ -1,6 +1,65 @@
 @import 'variables';
 
-.program-tables {
+body.noscroll {
+  overflow-y: hidden;
+}
+
+.special-tickets-article {
+  margin: 70px auto 0;
+  .special-tickets {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    a {
+      position: relative;
+      display: block;
+      width: 180px;
+      height: 180px;
+      transition: transform 250ms;
+      &:hover {
+        transform: scale(1.2);
+      }
+      &:first-child {
+        background: url("../layout/tickets2.png") no-repeat 0/contain;
+        filter: invert(1);
+        span {
+          position: absolute;
+          left: 27px;
+          bottom: 29px;
+          font-size: 15px;
+          width: 100px;
+          text-align: center;
+          color: black;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+      &:last-child {
+        background: url("../layout/video-player.png") no-repeat 0/contain;
+        filter: invert(1);
+        span {
+          position: absolute;
+          left: 42px;
+          bottom: 68px;
+          font-size: 14px;
+          width: 100px;
+          text-align: center;
+          color: black;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.mod_article.program-tables .ce_text {
+  h2 {
+    font-size: 26px;
+    font-weight: normal;
+    color: white;
+  }
   a {
     color: $pink;
     position: relative;
@@ -34,25 +93,24 @@
 
 .program-overlay {
   opacity: 0;
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0,0,0,.7);
-  z-index: 9999;
-  transition: opacity 1000ms;
+  z-index: -1;
+  transition: opacity 250ms ease-out;
   &.active {
-    display: block;
     opacity: 1;
+    z-index: 9999;
   }
 }
 
 .program-overlay-content {
   position: absolute;
   opacity: 0;
-  width: 60%;
+  width: 85%;
   height: 80%;
   top: 40%;
   left: 50%;
@@ -60,7 +118,7 @@
   box-sizing: border-box;
   transform: translate(-50%, -50%);
   background: black;
-  transition: top 500ms, opacity 500ms;
+  transition: top 250ms ease-out, opacity 250ms ease-out;
   overflow-y: scroll;
   &.active {
     opacity: 1;
@@ -93,8 +151,121 @@
   top: 20px;
   right: 20px;
   font-size: 80px;
-  line-height: 0em;
+  line-height: 0;
   cursor: pointer;
+  transition: color 250ms;
+  &:hover {
+    color: $pink;
+  }
+}
+
+#main .mod_article:not(#submissions-banner) #date-select {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.date-select-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130px;
+  height: 130px;
+  background: #64bbaa;
+  border-radius: 50%;
+  transition: transform 250ms, background 100ms;
+}
+
+.program-tables .date-select-link {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  &:hover,&.link-active {
+    .date-select-circle {
+      transform: scale(1.2);
+    }
+    .date-select-text {
+      transform: translate(55px,-55px) scale(1.5);
+    }
+  }
+  &:hover {
+    &:after {
+      height: 0;
+    }
+  }
+}
+
+.date-select-text {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 250ms;
+  p {
+    margin: 0;
+    span {
+      line-height: 1em;
+      display: block;
+      width: 100%;
+      font-size: 26px;
+      &.date-number {
+        font-size: 50px;
+      }
+    }
+  }
+  br {
+     display: block;
+     line-height: 0em;
+     height: 0;
+   }
+}
+
+.day-hidden {
+  display: none;
+}
+
+.table-head-date {
+  color: white;
+}
+
+.link-active {
+  .date-select-circle {
+    background: $blue;
+  }
+}
+
+body.tickets .award-headline.program-tables .ce_text {
+  text-align: left;
+  p.mobile-only strong {
+    color: $blue;
+    span {
+      color: white;
+    }
+  }
+}
+
+#main .mod_article:not(#submissions-banner) .ce_text.prizes table tr:not(:first-child) td:nth-child(2) a.mobile-only {
+  display: none;
+}
+
+.program-pdf-boxes {
+  background: $blue;
+  text-align: center;
+  padding: 60px 0;
+  box-sizing: border-box;
+  h2 {
+    font-size: 44px;
+  }
+  span {
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
 }
 
 @media screen and (max-width: $tablet) {
@@ -104,5 +275,85 @@
       height: 42vw;
       font-size: 4vw;
     }
+  }
+
+  .program-overlay-content {
+    width: 90%;
+    padding: 30px 0;
+  }
+
+  #main .mod_article:not(#submissions-banner) #date-select {
+    width: 95%;
+  }
+
+  .program-tables .date-select-link {
+    width: 19%;
+    height: 145px;
+  }
+
+  .date-select-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  #main .mod_article:not(#submissions-banner) .ce_text.prizes table tr {
+     height: 125px;
+   }
+
+  #main .mod_article:not(#submissions-banner) .ce_text.prizes table tr:first-child {
+    display: none;
+  }
+
+  .special-tickets-article .special-tickets {
+    width: 100%;
+    justify-content: space-around;
+    a {
+      width: 145px;
+      &:first-child {
+        span {
+          left: 20px;
+          bottom: -50px;
+        }
+      }
+      &:last-child {
+        span {
+          left: 27px;
+          bottom: 4px;
+        }
+      }
+    }
+  }
+
+  #main .mod_article:not(#submissions-banner) .ce_text.prizes table tr:not(:first-child) td:nth-child(2) {
+    border-right: none;
+    a {
+      height: auto;
+      &.mobile-ticket-link {
+        display: block;
+        background: white;
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        padding: 15px;
+        box-sizing: border-box;
+        margin: 8px;
+      }
+    }
+  }
+
+  #main .mod_article:not(#submissions-banner) .ce_text.prizes table tr:not(:first-child) td:nth-child(3) {
+    display: none;
+  }
+
+  .special-tickets-article {
+    margin-top: 0;
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .special-tickets-article {
+    margin: 45px auto 0;
   }
 }

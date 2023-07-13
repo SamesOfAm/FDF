@@ -16,8 +16,8 @@
 }
 
 #sponsor-banner {
-  background: $bright-blue;
-  margin: -120px 0 0;
+  background: #658ac4aa;
+  margin: -30px 0 0;
   padding: 50px 0;
   .ce_text:first-child {
     width: 100%;
@@ -125,7 +125,7 @@
     width: 50%;
     float: left;
     position: relative;
-    transform: translateY(150px);
+    transform: translateY(180px);
     h2 {
       font-size: 8vw;
       transform: translateX(2vw);
@@ -261,18 +261,30 @@ video {
   }
 }
 
+.with-lists {
+  ul {
+    padding-left: 20px;
+    list-style: disc;
+    font-size: 19px;
+  }
+}
+
 .video_container video {
   max-width: initial;
   width: 100%;
   object-fit: cover;
 }
 
+.mod_article.home-video {
+  margin: 25px auto;
+}
+
 body.home .video_container video {
-  max-height: 50vh;
+  max-height: 85vh;
 }
 
 .links.pink h2 {
-  mix-blend-mode: difference;
+  // mix-blend-mode: difference;
 }
 
 .to-top-button {

@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     if(document.getElementById('panorama')) {
         viewer = videojs('panorama', {
             plugins: {
@@ -42,4 +42,4 @@
 
 
 
-</script>
+</script> -->

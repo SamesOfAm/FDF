@@ -85,6 +85,18 @@ ul {
   display: none;
 }
 
+html[lang="de"] {
+  .en-only {
+    display: none;
+  }
+}
+
+html[lang="en"] {
+  .de-only {
+    display: none;
+  }
+}
+
 .full-width {
   img {
     width: 100%;

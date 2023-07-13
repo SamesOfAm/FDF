@@ -1,4 +1,5 @@
 if(document.querySelector('.program-tables')) {
+    console.log('Overlay');
     const overlay = document.createElement('div');
     const overlayContent = document.createElement('div');
     overlay.classList.add('program-overlay');
@@ -18,6 +19,10 @@ if(document.querySelector('.program-tables')) {
           showOverlay(link.dataset.overlay)
       })
     })
-
-    // <br>
+    document.body.addEventListener('click', (event) => {
+        console.log(event.target);
+        if(event.target !== overlay) {
+            console.log('Clicked outside');
+        }
+    })
 }

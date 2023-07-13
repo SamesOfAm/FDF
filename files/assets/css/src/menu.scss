@@ -47,7 +47,13 @@
             color: $pink;
             text-transform: uppercase;
             font-weight: bold;
-            font-size: 30px;
+            font-size: 25px;
+            width: 100%;
+            height: 100%;
+            padding: 10px 0;
+            display: flex;
+            box-sizing: border-box;
+            align-items: center;
           }
           strong {
             color: white;
