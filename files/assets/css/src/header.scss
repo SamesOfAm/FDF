@@ -48,7 +48,7 @@
     position: absolute;
     right: 10vw;
     .mod_changelanguage ul li a {
-      background: $blue;
+      background: $pink;
       color: white;
       font-size: 20px;
       text-transform: uppercase;
@@ -62,7 +62,7 @@
       justify-content: center;
       transition: color 250ms;
       &:hover {
-        color: $pink;
+        color: $blue;
       }
     }
   }
@@ -114,7 +114,7 @@
           }
         }
         strong {
-          color: $bright-blue;
+          color: white;
         }
       }
     }
